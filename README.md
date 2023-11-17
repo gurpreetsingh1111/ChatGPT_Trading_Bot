@@ -16,25 +16,25 @@ The ChatGPT trading bot project combines OpenAI's ChatGPT, known for its natural
 * **Firebase Template optional**
 
 # Setup Instructions
-> Download the iPython notebook in this repository and upload it to Colab to try it out.
-> Setup a simple flask app.
-> To set up a cron job for a Flask app deployed on Vercel that executes a Google Colab notebook at a given link every hour, you can use the built-in Vercel cron feature. Here are the steps to follow:
-> In your Flask app, import the necessary modules to run the Colab notebook, such as gdown or pyngrok
-> Create a new endpoint in your Flask app that triggers the execution of the Colab notebook, using the link to the notebook file.
-> Go to the Vercel project settings for your app and navigate to the "Cron" tab.
-> Create a new cron job that runs every hour by adding the endpoint you created in step 2 to the "Cron Job" field and select the frequency you want to run the job.
+*  Download the iPython notebook in this repository and upload it to Colab to try it out.
+* Setup a simple flask app.
+* To set up a cron job for a Flask app deployed on Vercel that executes a Google Colab notebook at a given link every hour, you can use the built-in Vercel cron feature. Here are the steps to follow:
+* In your Flask app, import the necessary modules to run the Colab notebook, such as gdown or pyngrok
+* Create a new endpoint in your Flask app that triggers the execution of the Colab notebook, using the link to the notebook file.
+* Go to the Vercel project settings for your app and navigate to the "Cron" tab.
+* Create a new cron job that runs every hour by adding the endpoint you created in step 2 to the "Cron Job" field and select the frequency you want to run the job.
 
 Here is a sample code snippet for step 2:
 
 
-from flask import Flask, jsonify
-import gdown
-app = Flask(__name__)
+> from flask import Flask, jsonify
+> import gdown
+> app = Flask(__name__)
 
-@app.route('/run-colab')
-def run_colab():
-    gdown.download('https://drive.google.com/file/d/<colab_notebook_id>', 'colab.ipynb', quiet=False)
-    return jsonify(message='colab notebook ran successfully')
+> @app.route('/run-colab')
+> def run_colab():
+  >  gdown.download('https://drive.google.com/file/d/<colab_notebook_id>', 'colab.ipynb', quiet=False)
+   > return jsonify(message='colab notebook ran successfully')
 
 # Credits & More Resources
 Credits for the notebook go to the AI4FinanceFoundation, and for the API go to Alpaca.
