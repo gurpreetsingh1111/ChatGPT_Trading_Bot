@@ -33,7 +33,7 @@ Here is a sample code snippet for step 2:
 
 > @app.route('/run-colab')
 > def run_colab():
-  >  gdown.download('https://drive.google.com/file/d/<colab_notebook_id>', 'colab.ipynb', quiet=False)
+  >  gdown.download('https://.............<colab_notebook_id>', 'colab.ipynb', quiet=False)
    > return jsonify(message='colab notebook ran successfully')
 
 # Credits & More Resources
