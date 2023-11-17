@@ -9,6 +9,7 @@ The ChatGPT trading bot project combines OpenAI's ChatGPT, known for its natural
 * If the expectd returns are above a certain threshold, buy, else hold. If they're below a certain threshold, sell. (using Alpaca API)
 
 <img src="https://camo.githubusercontent.com/b0ebbb985cd4de4f5944305231d225d512cdee29d35448cb1a3b18a1b82dfd59/68747470733a2f2f692e6962622e636f2f344b4a783979302f53637265656e2d53686f742d323032332d30312d31332d61742d31302d30342d33392d414d2e706e67" alt="alt text" data-canonical-src="https://i.ibb.co/4KJx9y0/Screen-Shot-2023-01-13-at-10-04-39-AM.png" style="max-width: 100%;">
+
 # Dependencies
 * **Python 3.7**
 * **Alpaca SDK**
